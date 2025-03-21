@@ -21,6 +21,7 @@ public class cs2_surffixteamfull : BasePlugin
             var player = e.Userid;
             if (player == null || player.IsBot || player.IsHLTV) return HookResult.Continue;
             player.SwitchTeam(CsTeam.CounterTerrorist);
+            player.Respawn();
             return HookResult.Continue;
         });
     }
